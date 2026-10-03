@@ -1,7 +1,8 @@
 # Systems index (tier 4)
 
-**No system is built yet.** The repository holds only a README and these docs (as of 2026-10-03,
-commit `620d564`). There is no code for a system document to describe, so none has been written.
+**No system is built yet.** As of 2026-10-03 the only code is a placeholder lesson screen
+(`src/App.svelte`, `src/lib/LessonScreen.svelte`, issue #3). It will be replaced by the lesson
+renderer in M2, so it gets no system document of its own.
 Writing "how it works" for code that does not exist would be guessing, and a guess here gets cited
 as fact later.
 

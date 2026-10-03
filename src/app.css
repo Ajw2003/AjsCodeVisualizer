@@ -1,0 +1,29 @@
+/* Colours as variables so dark mode is one override, keeping contrast high in both. */
+:root {
+  --bg: #ffffff;
+  --fg: #111418;
+  --muted: #3d4650;
+  --accent: #0b4fb3;
+  --accent-fg: #ffffff;
+  --track: #d5dae0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151a;
+    --fg: #f3f5f7;
+    --muted: #c3cad2;
+    --accent: #7db4ff;
+    --accent-fg: #0a0d12;
+    --track: #3a424c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}

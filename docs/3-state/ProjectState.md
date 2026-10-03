@@ -1,12 +1,15 @@
 # Project state (tier 3)
 
-**Headline: 0%.** As of 2026-10-03 the repository holds a one-line `README.md` and this
-documentation. No code. The roadmap's shape is decided (see
-[`../6-decisions/Decisions.md`](../6-decisions/Decisions.md)); building has not started.
+**Headline: about 5%.** As of 2026-10-03 the repository holds a Svelte + Vite app that shows one
+placeholder lesson screen (issue #3, `src/lib/LessonScreen.svelte`). It is installable and works
+offline (issue #4, `vite.config.js`): in headless Chromium, served from a sub-path like GitHub
+Pages, it reported no installability errors and still showed the lesson after a reload with the
+network off. A deploy workflow (issue #5, `.github/workflows/deploy-pages.yml`) publishes it to
+GitHub Pages on every push to `main`; it has not run yet, because it only runs on `main`.
 
 | Milestone | Weight | Status |
 |---|---|---|
-| M1 Foundations | 10% | Not started — issues #2 to #6 opened, ready to build |
+| M1 Foundations | 10% | In progress — #3, #4 built; #5 Pages workflow written, waits on merge + Pages setting; #6 settings to do |
 | M2 First lesson: breaking a task into steps | 25% | Not started |
 | M3 Python in the app + source registry | 20% | Not started |
 | M4 The fundamentals | 30% | Not started — concept list proposed, owner to confirm |
