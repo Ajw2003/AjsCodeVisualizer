@@ -3,6 +3,25 @@
 Dated, append-only. Newest entry at the top. An entry is never rewritten; a later entry that
 replaces it flips its `Status` line to `Superseded` with a pointer.
 
+## 2026-10-03 — Install the i-have-adhd Claude Code plugin, project-wide
+
+**Context.** The owner asked to install the `i-have-adhd` plugin (ayghri/i-have-adhd, v0.3.0,
+commit `839872f`), following that repo's `AGENTS.md`, which points to the Claude Code route in
+its `INSTALL.md`.
+
+**Decision.** Installed at **project** scope: `.claude/settings.json` enables
+`i-have-adhd@i-have-adhd` and declares its GitHub marketplace. It is on-demand: type
+`/i-have-adhd` to turn it on, and "stop adhd mode" to turn it off. Always-on (the
+`~/.claude/.i-have-adhd-always` flag) was not turned on.
+
+**Why.** The owner works from a phone only, so the cloud container is their environment.
+User-scope settings live in the container and are lost when it is reclaimed; project settings
+are committed and travel with the repository. Before installing, the plugin's only hook
+(`hooks/always-on.mjs`) was read: it checks for the opt-in flag file and prints the skill text.
+It makes no network calls and writes no files.
+
+**Status.** Standing.
+
 ## 2026-10-03 — Project shape: what, for whom, built with what
 
 **Context.** Issue #1 asked to decide the project's shape. The owner answered a set of questions
