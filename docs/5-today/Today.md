@@ -39,4 +39,4 @@
 ## Next, in order
 
 1. Owner reviews the roadmap and confirms or reorders the M4 concept list.
-2. Owner merges the #6 PR, then checks each setting and read-aloud on the S26.
+2. Owner checks each setting and read-aloud on the S26 (PR #9 merged and deployed).
