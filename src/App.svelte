@@ -19,7 +19,16 @@
     <LessonScreen {topic} {steps} onsettings={() => (view = 'settings')} />
   </div>
   {#if view === 'settings'}
-    <SettingsScreen onback={() => (view = 'lesson')} />
+    <svelte:boundary onerror={(e) => console.error('Settings failed to render.', e)}>
+      <SettingsScreen onback={() => (view = 'lesson')} />
+      {#snippet failed(error, reset)}
+        <section role="alert">
+          <p>Settings could not open.</p>
+          <p>{error?.message ?? String(error)}</p>
+          <button type="button" onclick={() => { reset(); view = 'lesson'; }}>Back to lesson</button>
+        </section>
+      {/snippet}
+    </svelte:boundary>
   {/if}
 </main>
 
