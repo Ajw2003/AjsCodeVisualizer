@@ -17,7 +17,11 @@ size, spacing, and read-aloud — and keeping those choices on the device. Built
 - **Fonts:** Atkinson Hyperlegible and OpenDyslexic come from `@fontsource` packages (latin, weights
   400 and 700 only). `vite.config.js` precaches `woff2` so they work offline: 270,368 bytes total.
 - **Read-aloud:** `src/lib/speech.svelte.js` wraps the browser's `speechSynthesis`. Local voices are
-  listed first and labelled "(works offline)". With no `speechSynthesis`, the read button is hidden.
+  listed first and labelled "(works offline)", and voices sharing a `voiceURI` are dropped (Android
+  lists duplicates; the keyed list threw on them, issue #10). "Read this step" speaks only the
+  current step's text (issue #11). With no `speechSynthesis`, the read button is hidden.
+- **Failure is visible:** `src/App.svelte` wraps the settings screen in `<svelte:boundary>`. If it
+  throws, the learner sees "Settings could not open.", the error text and a "Back to lesson" button.
 
 ## Where to start when it breaks
 
@@ -27,6 +31,7 @@ size, spacing, and read-aloud — and keeping those choices on the device. Built
 | Settings lost on reload | the `console.warn` from `load()`/`save()`; private browsing blocks storage |
 | Font wrong offline | `globPatterns` in `vite.config.js` and the font imports in `src/main.js` |
 | Nothing is read aloud | `speechSupported` and the device's installed voices |
+| "Settings could not open." | the error text shown, and `console.error` from the boundary |
 
 ## Checked
 

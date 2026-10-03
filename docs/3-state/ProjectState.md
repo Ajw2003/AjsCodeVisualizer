@@ -9,11 +9,13 @@ GitHub Pages on every push to `main`. Its first run (run 37150789202, after PR #
 with `success`. The owner confirmed on 2026-10-03 that the live site installs and works offline on
 their Samsung Galaxy S26 (Android), and shows the lesson in a desktop browser. Accessibility
 settings (issue #6) pass `docs/generated/issue-6/verify.mjs` and were deployed (PR #9, run
-37152045069, `success`); the owner's phone check of them is pending.
+37152045069, `success`); on the owner's S26, Settings did nothing
+(fixed in #10), read-aloud read the whole page (fixed in #11), and updates took 10+ minutes
+(fixed in #12). Those fixes pass their checks and await merge.
 
 | Milestone | Weight | Status |
 |---|---|---|
-| M1 Foundations | 10% | In progress — #3–#5 deployed and phone-checked; #6 settings deployed (PR #9), phone check pending |
+| M1 Foundations | 10% | In progress — #3–#5 deployed and phone-checked; #6 deployed; bugs #10–#12 fixed, awaiting merge and phone check |
 | M2 First lesson: breaking a task into steps | 25% | Not started |
 | M3 Python in the app + source registry | 20% | Not started |
 | M4 The fundamentals | 30% | Not started — concept list proposed, owner to confirm |

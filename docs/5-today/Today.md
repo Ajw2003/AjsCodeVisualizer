@@ -27,6 +27,9 @@
   read-aloud). Fonts add 270,368 bytes to the offline download. All checks in
   `generated/issue-6/verify.mjs` passed.
 
+- Owner's phone check of #6 found three bugs; opened #10, #11, #12 and fixed them. Each fix's
+  test was shown failing on the old code first, then passing.
+
 ## Deliberately not done
 
 - M4's concept order is proposed, not confirmed.
@@ -39,4 +42,5 @@
 ## Next, in order
 
 1. Owner reviews the roadmap and confirms or reorders the M4 concept list.
-2. Owner checks each setting and read-aloud on the S26 (PR #9 merged and deployed).
+2. Owner merges the bug-fix PR, then on the S26: Settings opens, read-aloud reads one step,
+   and a later deploy shows up after switching away from the app and back.
