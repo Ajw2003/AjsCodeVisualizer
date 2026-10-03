@@ -4,11 +4,12 @@
 placeholder lesson screen (issue #3, `src/lib/LessonScreen.svelte`). It is installable and works
 offline (issue #4, `vite.config.js`): in headless Chromium, served from a sub-path like GitHub
 Pages, it reported no installability errors and still showed the lesson after a reload with the
-network off. Not deployed yet; not yet tried on a real phone.
+network off. A deploy workflow (issue #5, `.github/workflows/deploy-pages.yml`) publishes it to
+GitHub Pages on every push to `main`; it has not run yet, because it only runs on `main`.
 
 | Milestone | Weight | Status |
 |---|---|---|
-| M1 Foundations | 10% | In progress — #3 app skeleton and #4 offline/installable built; #5 Pages, #6 settings to do |
+| M1 Foundations | 10% | In progress — #3, #4 built; #5 Pages workflow written, waits on merge + Pages setting; #6 settings to do |
 | M2 First lesson: breaking a task into steps | 25% | Not started |
 | M3 Python in the app + source registry | 20% | Not started |
 | M4 The fundamentals | 30% | Not started — concept list proposed, owner to confirm |

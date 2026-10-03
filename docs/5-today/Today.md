@@ -17,6 +17,9 @@
   `generated/issue-3/`.
 - Issue #4: installable and offline via `vite-plugin-pwa` (14 files precached, 42.78 KiB).
   Offline reload passed in headless Chromium; screenshot in `generated/issue-4/`.
+- Issue #5: GitHub Actions workflow that builds and publishes to GitHub Pages on push to `main`.
+  Action inputs checked against each action's `action.yml` at the pinned major version; the
+  workflow itself first runs after merge.
 
 ## Deliberately not done
 
@@ -31,5 +34,7 @@
 
 1. Owner merges PR #7, so new sessions get the docs and `/i-have-adhd`.
 2. Owner reviews the roadmap and confirms or reorders the M4 concept list.
-3. Build the rest of M1: #5 GitHub Pages, #6 accessibility settings.
-4. Check M1's acceptance on the owner's phone against the GitHub Pages URL.
+3. Owner sets Settings → Pages → Source to "GitHub Actions" and merges the M1 PR; check the
+   Pages URL on the owner's Android phone (install, then airplane mode).
+4. Build #6 accessibility settings.
+5. Check M1's acceptance on the owner's phone against the GitHub Pages URL.
