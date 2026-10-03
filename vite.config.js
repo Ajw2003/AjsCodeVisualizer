@@ -7,8 +7,14 @@ export default defineConfig({
     svelte(),
     VitePWA({
       registerType: 'autoUpdate',
-      injectRegister: 'auto',
+      // Registered by hand in src/lib/app-updates.js so it can poll for updates.
+      injectRegister: false,
       workbox: {
+        // The plugin only implies these for injectRegister 'auto'/null (dist/index.js, the
+        // `workbox.skipWaiting = true` branch); with false they must be explicit or a new worker
+        // waits forever and the page never reloads onto it.
+        skipWaiting: true,
+        clientsClaim: true,
         globPatterns: ['**/*.{js,css,html,svg,png,ico,webmanifest,woff2}'],
       },
       manifest: {

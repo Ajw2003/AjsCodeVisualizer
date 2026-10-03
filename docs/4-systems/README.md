@@ -1,6 +1,7 @@
 # Systems index (tier 4)
 
-**Built systems:** [Accessibility settings](AccessibilitySettings.md) (issue #6). The lesson
+**Built systems:** [Accessibility settings](AccessibilitySettings.md) (issue #6) and
+[App updates](AppUpdates.md) (issue #12). The lesson
 screen (`src/lib/LessonScreen.svelte`) is still a placeholder; the lesson renderer in M2 replaces
 it, so it gets no system document of its own.
 Writing "how it works" for code that does not exist would be guessing, and a guess here gets cited

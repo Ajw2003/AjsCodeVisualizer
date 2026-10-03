@@ -123,9 +123,15 @@ const stepFont = (page) => page.locator('.idea').evaluate((e) => getComputedStyl
     } });
   });
   await page.goto(SITE);
-  await page.getByRole('button', { name: 'Read this screen' }).click();
+  // Issue 11: only the current step is read, not the title and step count above it.
+  await page.getByRole('button', { name: 'Read this step' }).click();
   console.log('e) spoken:', JSON.stringify(await page.evaluate(() => window.__spoken)));
+  assert.deepEqual(await page.evaluate(() => window.__spoken), ['Fill the kettle with water and switch it on.']);
   console.log('e) button now reads:', await page.locator('button.read').innerText());
+  await page.getByRole('button', { name: 'Next' }).click();
+  await page.getByRole('button', { name: 'Read this step' }).click();
+  console.log('e) after Next, spoken:', JSON.stringify(await page.evaluate(() => window.__spoken)));
+  assert.equal(await page.evaluate(() => window.__spoken.at(-1)), 'Put a tea bag in a cup and pour in the hot water.');
   await openSettings(page);
   console.log('e) voice options:', JSON.stringify(await page.locator('#voice option').allInnerTexts()));
   await ctx.close();
@@ -134,7 +140,7 @@ const stepFont = (page) => page.locator('.idea').evaluate((e) => getComputedStyl
   const { ctx, page, errors } = await fresh();
   await page.addInitScript(() => Object.defineProperty(window, 'speechSynthesis', { value: undefined, configurable: true }));
   await page.goto(SITE);
-  console.log('e) no speechSynthesis: read button count =', await page.getByRole('button', { name: /Read this screen/ }).count());
+  console.log('e) no speechSynthesis: read button count =', await page.getByRole('button', { name: /Read this step/ }).count());
   await openSettings(page);
   console.log('e) settings text:', await page.getByText(/no built-in voices/).innerText(), '| page errors:', JSON.stringify(errors));
   assert.equal(errors.length, 0);

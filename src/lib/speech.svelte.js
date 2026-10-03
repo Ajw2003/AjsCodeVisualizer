@@ -10,7 +10,10 @@ function refreshVoices() {
   try {
     const all = window.speechSynthesis.getVoices();
     // Local voices first because they keep working offline.
-    speech.voices = [...all].sort((a, b) => Number(b.localService) - Number(a.localService));
+    const sorted = [...all].sort((a, b) => Number(b.localService) - Number(a.localService));
+    // Android can list two voices with one voiceURI; keyed lists need unique keys, so keep the first.
+    const seen = new Set();
+    speech.voices = sorted.filter((v) => !seen.has(v.voiceURI) && seen.add(v.voiceURI));
   } catch (err) {
     console.warn('Could not list speech voices.', err);
   }

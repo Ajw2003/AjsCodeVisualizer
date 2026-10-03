@@ -15,7 +15,8 @@
 
   function toggleReading() {
     if (speech.speaking) stopReading();
-    else readAloud(`${topic}. Step ${index + 1} of ${total}. ${steps[index]}`);
+    // Only the current step: the title and step count are already on screen.
+    else readAloud(steps[index]);
   }
 </script>
 
@@ -45,7 +46,7 @@
 
   {#if speechSupported}
     <button type="button" class="secondary read" onclick={toggleReading}>
-      {speech.speaking ? 'Stop reading' : 'Read this screen'}
+      {speech.speaking ? 'Stop reading' : 'Read this step'}
     </button>
   {/if}
   <button type="button" onclick={advance}>{last ? 'Start again' : 'Next'}</button>
