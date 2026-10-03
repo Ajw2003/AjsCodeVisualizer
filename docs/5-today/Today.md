@@ -20,6 +20,12 @@
 - Issue #5: GitHub Actions workflow that builds and publishes to GitHub Pages on push to `main`.
   Action inputs checked against each action's `action.yml` at the pinned major version; the
   workflow itself first runs after merge.
+- PR #8 merged; the first Pages deploy run finished with `success`.
+- Owner confirmed: the live app installs and works offline on their Samsung Galaxy S26.
+- Closed #3, #4, #5 (owner asked).
+- Issue #6: settings screen (calm mode, Atkinson Hyperlegible / OpenDyslexic, size, spacing,
+  read-aloud). Fonts add 270,368 bytes to the offline download. All checks in
+  `generated/issue-6/verify.mjs` passed.
 
 ## Deliberately not done
 
@@ -32,9 +38,5 @@
 
 ## Next, in order
 
-1. Owner merges PR #7, so new sessions get the docs and `/i-have-adhd`.
-2. Owner reviews the roadmap and confirms or reorders the M4 concept list.
-3. Owner sets Settings → Pages → Source to "GitHub Actions" and merges the M1 PR; check the
-   Pages URL on the owner's Android phone (install, then airplane mode).
-4. Build #6 accessibility settings.
-5. Check M1's acceptance on the owner's phone against the GitHub Pages URL.
+1. Owner reviews the roadmap and confirms or reorders the M4 concept list.
+2. Owner merges the #6 PR, then checks each setting and read-aloud on the S26.

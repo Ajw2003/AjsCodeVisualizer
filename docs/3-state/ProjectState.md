@@ -1,15 +1,18 @@
 # Project state (tier 3)
 
-**Headline: about 5%.** As of 2026-10-03 the repository holds a Svelte + Vite app that shows one
+**Headline: about 10% (M1 built).** As of 2026-10-03 the repository holds a Svelte + Vite app that shows one
 placeholder lesson screen (issue #3, `src/lib/LessonScreen.svelte`). It is installable and works
 offline (issue #4, `vite.config.js`): in headless Chromium, served from a sub-path like GitHub
 Pages, it reported no installability errors and still showed the lesson after a reload with the
 network off. A deploy workflow (issue #5, `.github/workflows/deploy-pages.yml`) publishes it to
-GitHub Pages on every push to `main`; it has not run yet, because it only runs on `main`.
+GitHub Pages on every push to `main`. Its first run (run 37150789202, after PR #8 merged) finished
+with `success`. The owner confirmed on 2026-10-03 that the live site installs and works offline on
+their Samsung Galaxy S26 (Android), and shows the lesson in a desktop browser. Accessibility
+settings (issue #6) are built and pass `docs/generated/issue-6/verify.mjs`; not yet merged.
 
 | Milestone | Weight | Status |
 |---|---|---|
-| M1 Foundations | 10% | In progress — #3, #4 built; #5 Pages workflow written, waits on merge + Pages setting; #6 settings to do |
+| M1 Foundations | 10% | In progress — #3–#5 deployed and phone-checked; #6 settings built, awaiting merge and phone check |
 | M2 First lesson: breaking a task into steps | 25% | Not started |
 | M3 Python in the app + source registry | 20% | Not started |
 | M4 The fundamentals | 30% | Not started — concept list proposed, owner to confirm |

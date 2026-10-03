@@ -3,6 +3,20 @@
 Dated, append-only. Newest entry at the top. An entry is never rewritten; a later entry that
 replaces it flips its `Status` line to `Superseded` with a pointer.
 
+## 2026-10-03 — Reading fonts: Atkinson Hyperlegible and OpenDyslexic
+
+**Context.** Issue #6 asks for a dyslexia-friendly font choice. Every bundled font adds to the
+offline download.
+
+**Decision.** The owner chose: device default, Atkinson Hyperlegible, and OpenDyslexic, from the
+`@fontsource` packages (OFL-1.1), latin subset, weights 400 and 700. Measured cost: 270,368 bytes
+of woff2 (OpenDyslexic about 236 kB of that).
+
+**Why.** Atkinson is small and built for legibility; OpenDyslexic is the font many dyslexic
+readers ask for by name. Offered alternatives were Atkinson only, or device fonts only.
+
+**Status.** Standing.
+
 ## 2026-10-03 — Ship i-have-adhd as a project skill instead of a plugin
 
 **Context.** The owner reported that `/i-have-adhd` did not appear in a new session. Cause found:

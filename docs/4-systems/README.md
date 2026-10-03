@@ -1,8 +1,8 @@
 # Systems index (tier 4)
 
-**No system is built yet.** As of 2026-10-03 the only code is a placeholder lesson screen
-(`src/App.svelte`, `src/lib/LessonScreen.svelte`, issue #3). It will be replaced by the lesson
-renderer in M2, so it gets no system document of its own.
+**Built systems:** [Accessibility settings](AccessibilitySettings.md) (issue #6). The lesson
+screen (`src/lib/LessonScreen.svelte`) is still a placeholder; the lesson renderer in M2 replaces
+it, so it gets no system document of its own.
 Writing "how it works" for code that does not exist would be guessing, and a guess here gets cited
 as fact later.
 
