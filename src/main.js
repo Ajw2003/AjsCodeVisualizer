@@ -4,6 +4,7 @@ import '@fontsource/atkinson-hyperlegible/latin-700.css';
 import '@fontsource/opendyslexic/latin-400.css';
 import '@fontsource/opendyslexic/latin-700.css';
 import './app.css';
+import './lib/app-updates.js';
 import App from './App.svelte';
 import { applySettings } from './lib/settings.svelte.js';
 
