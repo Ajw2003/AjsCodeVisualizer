@@ -42,5 +42,5 @@
 ## Next, in order
 
 1. Owner reviews the roadmap and confirms or reorders the M4 concept list.
-2. Owner merges the bug-fix PR, then on the S26: Settings opens, read-aloud reads one step,
+2. PR #13 merged and deployed. Owner checks on the S26: Settings opens, read-aloud reads one step,
    and a later deploy shows up after switching away from the app and back.

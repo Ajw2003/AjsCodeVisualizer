@@ -11,11 +11,12 @@ their Samsung Galaxy S26 (Android), and shows the lesson in a desktop browser. A
 settings (issue #6) pass `docs/generated/issue-6/verify.mjs` and were deployed (PR #9, run
 37152045069, `success`); on the owner's S26, Settings did nothing
 (fixed in #10), read-aloud read the whole page (fixed in #11), and updates took 10+ minutes
-(fixed in #12). Those fixes pass their checks and await merge.
+(fixed in #12). Those fixes pass their checks and were deployed
+(PR #13, run 37158985775, `success`); the owner's phone check is pending.
 
 | Milestone | Weight | Status |
 |---|---|---|
-| M1 Foundations | 10% | In progress — #3–#5 deployed and phone-checked; #6 deployed; bugs #10–#12 fixed, awaiting merge and phone check |
+| M1 Foundations | 10% | In progress — #3–#5 deployed and phone-checked; #6 deployed; bugs #10–#12 fixed and deployed (PR #13), phone check pending |
 | M2 First lesson: breaking a task into steps | 25% | Not started |
 | M3 Python in the app + source registry | 20% | Not started |
 | M4 The fundamentals | 30% | Not started — concept list proposed, owner to confirm |
