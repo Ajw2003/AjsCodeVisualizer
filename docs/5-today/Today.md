@@ -20,6 +20,7 @@
 - Issue #5: GitHub Actions workflow that builds and publishes to GitHub Pages on push to `main`.
   Action inputs checked against each action's `action.yml` at the pinned major version; the
   workflow itself first runs after merge.
+- PR #8 merged; the first Pages deploy run finished with `success`.
 
 ## Deliberately not done
 
@@ -34,7 +35,7 @@
 
 1. Owner merges PR #7, so new sessions get the docs and `/i-have-adhd`.
 2. Owner reviews the roadmap and confirms or reorders the M4 concept list.
-3. Owner sets Settings → Pages → Source to "GitHub Actions" and merges the M1 PR; check the
-   Pages URL on the owner's Android phone (install, then airplane mode).
+3. Owner opens https://ajw2003.github.io/AjsCodeVisualizer/ on their Android phone, installs it,
+   and reopens it in airplane mode.
 4. Build #6 accessibility settings.
 5. Check M1's acceptance on the owner's phone against the GitHub Pages URL.
