@@ -10,6 +10,8 @@
   `6-decisions/Decisions.md` and turned the roadmap from a draft into milestones with acceptance
   criteria.
 - Opened GitHub issues for M1: #2 (parent) and #3–#6 (one per step).
+- Added the i-have-adhd skill as a project skill (`.claude/skills/i-have-adhd/`), after the plugin
+  route failed to reach new sessions. Opened for merge as PR #7.
 
 ## Deliberately not done
 
@@ -23,6 +25,7 @@
 
 ## Next, in order
 
-1. Owner reviews the roadmap and confirms or reorders the M4 concept list.
-2. Build M1, one child issue at a time.
-3. Check M1's acceptance on the owner's phone against the GitHub Pages URL.
+1. Owner merges PR #7, so new sessions get the docs and `/i-have-adhd`.
+2. Owner reviews the roadmap and confirms or reorders the M4 concept list.
+3. Build M1, one child issue at a time.
+4. Check M1's acceptance on the owner's phone against the GitHub Pages URL.
