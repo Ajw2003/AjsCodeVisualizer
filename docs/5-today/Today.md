@@ -22,6 +22,10 @@
   workflow itself first runs after merge.
 - PR #8 merged; the first Pages deploy run finished with `success`.
 - Owner confirmed: the live app installs and works offline on their Samsung Galaxy S26.
+- Closed #3, #4, #5 (owner asked).
+- Issue #6: settings screen (calm mode, Atkinson Hyperlegible / OpenDyslexic, size, spacing,
+  read-aloud). Fonts add 270,368 bytes to the offline download. All checks in
+  `generated/issue-6/verify.mjs` passed.
 
 ## Deliberately not done
 
@@ -35,5 +39,4 @@
 ## Next, in order
 
 1. Owner reviews the roadmap and confirms or reorders the M4 concept list.
-2. Build #6 accessibility settings.
-3. Check M1's acceptance on the owner's phone against the GitHub Pages URL (settings part).
+2. Owner merges the #6 PR, then checks each setting and read-aloud on the S26.
