@@ -3,6 +3,24 @@
 Dated, append-only. Newest entry at the top. An entry is never rewritten; a later entry that
 replaces it flips its `Status` line to `Superseded` with a pointer.
 
+## 2026-10-03 — Ship i-have-adhd as a project skill instead of a plugin
+
+**Context.** The owner reported that `/i-have-adhd` did not appear in a new session. Cause found:
+new sessions start from `main`, and `main` held only `README.md` (`git ls-tree origin/main`,
+checked 2026-10-03). The plugin setting existed only on branch `claude/bold-ride-pnxpvx`.
+
+**Decision.** The skill file is now committed directly, as `.claude/skills/i-have-adhd/SKILL.md`
+(an unmodified copy of ayghri/i-have-adhd `skills/i-have-adhd/SKILL.md` at commit `839872f`),
+with its MIT `LICENSE` beside it. The plugin entry in `.claude/settings.json` was removed and
+that file deleted. The skill reaches new sessions only once this branch is merged into `main`.
+
+**Why.** A project skill is read straight from the repository; a plugin also has to be
+downloaded from its marketplace when the session starts, which is one more thing that can fail
+in a fresh cloud container. Keeping both would leave two copies to drift apart. Cost: upstream
+updates are no longer automatic. To update, re-copy the file from the upstream repo.
+
+**Status.** Standing.
+
 ## 2026-10-03 — Install the i-have-adhd Claude Code plugin, project-wide
 
 **Context.** The owner asked to install the `i-have-adhd` plugin (ayghri/i-have-adhd, v0.3.0,
@@ -20,7 +38,7 @@ are committed and travel with the repository. Before installing, the plugin's on
 (`hooks/always-on.mjs`) was read: it checks for the opt-in flag file and prints the skill text.
 It makes no network calls and writes no files.
 
-**Status.** Standing.
+**Status.** Superseded by [2026-10-03 — Ship i-have-adhd as a project skill instead of a plugin](#2026-10-03--ship-i-have-adhd-as-a-project-skill-instead-of-a-plugin) on 2026-10-03.
 
 ## 2026-10-03 — Project shape: what, for whom, built with what
 
