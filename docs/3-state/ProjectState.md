@@ -1,12 +1,12 @@
 # Project state (tier 3)
 
-**Headline: 0%.** As of 2026-10-03 the repository holds a one-line `README.md` and this
-documentation. No code. The roadmap's shape is decided (see
-[`../6-decisions/Decisions.md`](../6-decisions/Decisions.md)); building has not started.
+**Headline: about 2%.** As of 2026-10-03 the repository holds a Svelte + Vite app that shows one
+placeholder lesson screen (issue #3, `src/lib/LessonScreen.svelte`). `npm run build` passes
+(28.30 kB JS, 11.52 kB gzipped). It is not installable, not offline and not deployed yet.
 
 | Milestone | Weight | Status |
 |---|---|---|
-| M1 Foundations | 10% | Not started — issues #2 to #6 opened, ready to build |
+| M1 Foundations | 10% | In progress — #3 (app skeleton) built; #4 offline, #5 Pages, #6 settings to do |
 | M2 First lesson: breaking a task into steps | 25% | Not started |
 | M3 Python in the app + source registry | 20% | Not started |
 | M4 The fundamentals | 30% | Not started — concept list proposed, owner to confirm |
