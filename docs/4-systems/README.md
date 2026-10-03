@@ -5,21 +5,21 @@ commit `620d564`). There is no code for a system document to describe, so none h
 Writing "how it works" for code that does not exist would be guessing, and a guess here gets cited
 as fact later.
 
-## Candidate systems (from issue #1, not yet decided)
+## Planned systems (shape decided 2026-10-03, none built)
 
-These are the parts issue #1 implies. Each becomes a system document here once it exists in code
-and passes the test "if this is wrong, does the product stop working?"
+Each becomes a system document here once it exists in code and passes the test "if this is
+wrong, does the product stop working?" Decisions behind them: [`../6-decisions/Decisions.md`](../6-decisions/Decisions.md).
 
-| Candidate | What it would own | Source in issue #1 |
+| Planned system | What it will own | Milestone |
 |---|---|---|
-| Source registry | The vetted list of official, trustworthy documentation sources per language, and how lessons cite them | "compile a database of known trustworthy and reliable sources" |
-| Concept model | A language-agnostic description of a concept (variable, function, class, loop, a design pattern) that every visual is drawn from | "language-agnostic code visualiser" |
-| Visualisation pipeline | Turning a concept (or a piece of code) into an interactive, step-through visual | "pipeline to create visual and interactive representations" |
-| App shell | The installable offline web app (PWA): install, offline cache, navigation, saved progress | "installable PWA web app" |
-
-Which of these are real systems, and whether the pipeline reads real code or hand-authored lesson
-data, depends on the open questions in [`../2-roadmap/Roadmap.md`](../2-roadmap/Roadmap.md).
+| App shell | Install, offline cache (service worker), navigation, accessibility settings saved on the device | M1 |
+| Lesson format and renderer | The hand-authored, language-neutral lesson format (one idea per screen) and turning it into a step-through visual | M2 |
+| Python runner | Running learner code offline with Pyodide, and explaining errors in plain English | M3 |
+| Source registry | The list of official documentation pages lessons cite (Python: docs.python.org only) | M3 |
+| Progress checks | Running a learner's program against expected results, step by step | M5 |
 
 ## Considered and left out
 
-None yet.
+- **Code reader** (parse code the learner pastes in and visualise it) — deferred: needs a
+  parser per language. Lessons are hand-authored instead.
+- **Server or database** — none: the app is static and stores progress on the device.
