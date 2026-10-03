@@ -15,6 +15,8 @@
 - Issue #3: Svelte + Vite app with one placeholder lesson screen (3 tea-making steps, a "Next"
   button, a progress bar). Build passes; screenshots at 390px (light) and 360px (dark) are in
   `generated/issue-3/`.
+- Issue #4: installable and offline via `vite-plugin-pwa` (14 files precached, 42.78 KiB).
+  Offline reload passed in headless Chromium; screenshot in `generated/issue-4/`.
 
 ## Deliberately not done
 
@@ -29,5 +31,5 @@
 
 1. Owner merges PR #7, so new sessions get the docs and `/i-have-adhd`.
 2. Owner reviews the roadmap and confirms or reorders the M4 concept list.
-3. Build the rest of M1: #4 offline, #5 GitHub Pages, #6 accessibility settings.
+3. Build the rest of M1: #5 GitHub Pages, #6 accessibility settings.
 4. Check M1's acceptance on the owner's phone against the GitHub Pages URL.

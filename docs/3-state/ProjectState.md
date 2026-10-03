@@ -1,12 +1,14 @@
 # Project state (tier 3)
 
-**Headline: about 2%.** As of 2026-10-03 the repository holds a Svelte + Vite app that shows one
-placeholder lesson screen (issue #3, `src/lib/LessonScreen.svelte`). `npm run build` passes
-(28.30 kB JS, 11.52 kB gzipped). It is not installable, not offline and not deployed yet.
+**Headline: about 5%.** As of 2026-10-03 the repository holds a Svelte + Vite app that shows one
+placeholder lesson screen (issue #3, `src/lib/LessonScreen.svelte`). It is installable and works
+offline (issue #4, `vite.config.js`): in headless Chromium, served from a sub-path like GitHub
+Pages, it reported no installability errors and still showed the lesson after a reload with the
+network off. Not deployed yet; not yet tried on a real phone.
 
 | Milestone | Weight | Status |
 |---|---|---|
-| M1 Foundations | 10% | In progress — #3 (app skeleton) built; #4 offline, #5 Pages, #6 settings to do |
+| M1 Foundations | 10% | In progress — #3 app skeleton and #4 offline/installable built; #5 Pages, #6 settings to do |
 | M2 First lesson: breaking a task into steps | 25% | Not started |
 | M3 Python in the app + source registry | 20% | Not started |
 | M4 The fundamentals | 30% | Not started — concept list proposed, owner to confirm |
