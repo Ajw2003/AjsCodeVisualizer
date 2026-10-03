@@ -18,12 +18,22 @@
     --track: #3a424c;
   }
 }
+html { font-size: var(--text-scale, 100%); }
 * { box-sizing: border-box; }
 body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-family, system-ui, sans-serif);
   font-size: 1.25rem;
-  line-height: 1.6;
+  line-height: var(--line-height, 1.5);
+  letter-spacing: var(--letter-spacing, 0);
+  word-spacing: var(--word-spacing, 0);
+}
+/* Calm mode wins over any component-level motion. */
+[data-calm='true'] *,
+[data-calm='true'] *::before,
+[data-calm='true'] *::after {
+  transition: none !important;
+  animation: none !important;
 }
