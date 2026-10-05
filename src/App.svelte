@@ -1,31 +1,40 @@
 <script>
   import LessonScreen from './lib/LessonScreen.svelte';
   import SettingsScreen from './lib/SettingsScreen.svelte';
+  import LessonPicker from './lib/LessonPicker.svelte';
+  import { LESSONS } from './lessons/index.js';
 
-  // Placeholder content; real lessons come from a later issue.
-  const topic = 'Breaking a task into steps';
-  const steps = [
-    'Fill the kettle with water and switch it on.',
-    'Put a tea bag in a cup and pour in the hot water.',
-    'Wait a few minutes, take the tea bag out, then add milk if you like.',
-  ];
+  let view = $state('picker');
+  let lesson = $state(null);
+  // Settings returns to whichever screen opened it.
+  let before = $state('picker');
 
-  let view = $state('lesson');
+  function openSettings() {
+    before = view;
+    view = 'settings';
+  }
 </script>
 
 <main>
+  {#if view === 'picker'}
+    <LessonPicker lessons={LESSONS} onpick={(l) => { lesson = l; view = 'lesson'; }} onsettings={openSettings} />
+  {/if}
   <!-- Lesson is hidden, not unmounted, so the learner keeps their place after visiting settings. -->
-  <div hidden={view !== 'lesson'}>
-    <LessonScreen {topic} {steps} onsettings={() => (view = 'settings')} />
-  </div>
+  {#if lesson}
+    <div hidden={view !== 'lesson'}>
+      {#key lesson}
+        <LessonScreen {lesson} onsettings={openSettings} onlessons={() => (view = 'picker')} />
+      {/key}
+    </div>
+  {/if}
   {#if view === 'settings'}
     <svelte:boundary onerror={(e) => console.error('Settings failed to render.', e)}>
-      <SettingsScreen onback={() => (view = 'lesson')} />
+      <SettingsScreen onback={() => (view = before)} />
       {#snippet failed(error, reset)}
         <section role="alert">
           <p>Settings could not open.</p>
           <p>{error?.message ?? String(error)}</p>
-          <button type="button" onclick={() => { reset(); view = 'lesson'; }}>Back to lesson</button>
+          <button type="button" onclick={() => { reset(); view = before; }}>Back</button>
         </section>
       {/snippet}
     </svelte:boundary>
