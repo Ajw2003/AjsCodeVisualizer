@@ -3,6 +3,26 @@
 Dated, append-only. Newest entry at the top. An entry is never rewritten; a later entry that
 replaces it flips its `Status` line to `Superseded` with a pointer.
 
+## 2026-10-05 — Gamification that only adds, saved on the device
+
+**Context.** The project's goal includes game-like progress and rewards, but neither the code nor
+the roadmap had any (searched `src/` and `docs/` on `main` at `e6a8671`). It has to fit the
+ADHD-friendly, calm-mode, offline, no-server design.
+
+**Decision.** The owner accepted [`../plans/gamification.md`](../plans/gamification.md) as
+written: pick up where you left off, a finish screen per lesson, real counts instead of XP,
+skills earned by proof, a "days learned" count instead of a streak, a course map, and a
+"Celebrations" setting that calm mode holds at Quiet. Progress is stored in localStorage key
+`ajs-progress-v1`, with a backup file in M6. Pieces slot into M2–M6; weights are unchanged.
+
+**Why.** Losing a streak, lives or a leaderboard place punishes stopping, which drives ADHD
+learners away; every mechanic chosen only adds. Leaderboards and push reminders also need a
+server. Offered alternatives: a classic streak or no day count at all; an XP number alongside
+the counts; starting after M4 instead of M2. M2 was chosen because resuming needs lesson ids
+from the first lesson.
+
+**Status.** Standing.
+
 ## 2026-10-03 — Reading fonts: Atkinson Hyperlegible and OpenDyslexic
 
 **Context.** Issue #6 asks for a dyslexia-friendly font choice. Every bundled font adds to the

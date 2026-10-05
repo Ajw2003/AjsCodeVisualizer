@@ -29,6 +29,8 @@ not been confirmed by the owner.
 
 ## Cross-cutting issues that belong to no milestone
 
+- Gamification runs through M2–M6 (accepted 2026-10-05, [`../plans/gamification.md`](../plans/gamification.md)).
+  None of it is built yet; the first pieces (resume, finish screen, progress store) land in M2.
 - Accessibility runs through every milestone. M1 builds the settings; every later lesson must
   honour them, and nothing yet checks that automatically.
 - Offline install size: Pyodide adds several megabytes. Not measured yet (M3).
