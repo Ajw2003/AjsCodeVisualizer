@@ -75,6 +75,7 @@ outside testers.
 
 ## Later, not in 0–100%
 
-- More languages (JavaScript next is the natural candidate; it runs in the browser natively).
+- More languages for *running* code. Showing lesson code in JavaScript beside Python was brought
+  forward on 2026-10-05 (see `../6-decisions/Decisions.md`).
 - Reading code the learner pastes in and visualising it (needs a parser per language).
 - Design patterns and conventions beyond the fundamentals.

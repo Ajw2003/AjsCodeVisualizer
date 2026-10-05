@@ -11,14 +11,19 @@ their Samsung Galaxy S26 (Android), and shows the lesson in a desktop browser. A
 settings (issue #6) pass `docs/generated/issue-6/verify.mjs` and were deployed (PR #9, run
 37152045069, `success`); on the owner's S26, Settings did nothing
 (fixed in #10), read-aloud read the whole page (fixed in #11), and updates took 10+ minutes
-(fixed in #12). Those fixes pass their checks and await merge.
+(fixed in #12); those fixes merged in PR #13.
+
+On 2026-10-05 a draft (issue #14) added a lesson picker, a lesson format with step-through code,
+and three example lessons (variables, if/else, loops) shown in Python or JavaScript. Every code
+sample's output was checked against real `python3` and `node`, and every lesson clicked through
+in Chromium (`docs/generated/issue-14/verify-output.txt`). It is not merged or phone-checked yet.
 
 | Milestone | Weight | Status |
 |---|---|---|
 | M1 Foundations | 10% | In progress — #3–#5 deployed and phone-checked; #6 deployed; bugs #10–#12 fixed, awaiting merge and phone check |
-| M2 First lesson: breaking a task into steps | 25% | Not started |
+| M2 First lesson: breaking a task into steps | 25% | Lesson format drafted in #14 (not merged); the steps lesson itself not started |
 | M3 Python in the app + source registry | 20% | Not started |
-| M4 The fundamentals | 30% | Not started — concept list proposed, owner to confirm |
+| M4 The fundamentals | 30% | Example lessons for variables, if/else, loops drafted in #14 (no Python runner or doc citations yet) |
 | M5 Build it and prove it works | 10% | Not started |
 | M6 Release | 5% | Not started — acceptance has a TODO (who the outside testers are) |
 

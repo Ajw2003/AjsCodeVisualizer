@@ -44,3 +44,16 @@
 1. Owner reviews the roadmap and confirms or reorders the M4 concept list.
 2. Owner merges the bug-fix PR, then on the S26: Settings opens, read-aloud reads one step,
    and a later deploy shows up after switching away from the app and back.
+
+# Today — 2026-10-05 (tier 5)
+
+## Done
+
+- Opened issue #14 (example lessons) with children #15 to #18.
+- Owner chose Python + JavaScript for lesson code; logged in `6-decisions/Decisions.md`.
+- Built the lesson picker, the lesson format (`4-systems/LessonFormat.md`), and lessons for
+  variables, if/else and loops. `generated/issue-14/verify.mjs`: all checks passed.
+
+## Next
+
+1. Owner looks at the draft PR's screenshots, or the preview once merged, and says what to change.
