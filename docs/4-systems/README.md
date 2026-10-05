@@ -1,9 +1,8 @@
 # Systems index (tier 4)
 
-**Built systems:** [Accessibility settings](AccessibilitySettings.md) (issue #6) and
-[App updates](AppUpdates.md) (issue #12). The lesson
-screen (`src/lib/LessonScreen.svelte`) is still a placeholder; the lesson renderer in M2 replaces
-it, so it gets no system document of its own.
+**Built systems:** [Accessibility settings](AccessibilitySettings.md) (issue #6),
+[App updates](AppUpdates.md) (issue #12) and [Lesson format and renderer](LessonFormat.md)
+(issue #14, example lessons; on a branch awaiting merge as of 2026-10-05).
 Writing "how it works" for code that does not exist would be guessing, and a guess here gets cited
 as fact later.
 
@@ -15,7 +14,7 @@ wrong, does the product stop working?" Decisions behind them: [`../6-decisions/D
 | Planned system | What it will own | Milestone |
 |---|---|---|
 | App shell | Install, offline cache (service worker), navigation, accessibility settings saved on the device | M1 |
-| Lesson format and renderer | The hand-authored, language-neutral lesson format (one idea per screen) and turning it into a step-through visual | M2 |
+| Lesson format and renderer | Built as a draft: see [LessonFormat.md](LessonFormat.md) | M2 |
 | Python runner | Running learner code offline with Pyodide, and explaining errors in plain English | M3 |
 | Source registry | The list of official documentation pages lessons cite (Python: docs.python.org only) | M3 |
 | Progress checks | Running a learner's program against expected results, step by step | M5 |

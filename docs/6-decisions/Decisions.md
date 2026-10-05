@@ -3,6 +3,25 @@
 Dated, append-only. Newest entry at the top. An entry is never rewritten; a later entry that
 replaces it flips its `Status` line to `Superseded` with a pointer.
 
+## 2026-10-05 — Example lessons show code in Python and JavaScript
+
+**Context.** The project's setup card asked for example lessons for foundational concepts "in a
+few languages". The 2026-10-03 shape decision said Python only, others later, with JavaScript as
+the natural next one.
+
+**Decision.** The owner chose Python + JavaScript (2026-10-05, decision card in the project
+thread). Each code screen has a Python / JavaScript switch, saved on the device with the other
+settings. The visual (boxes, highlighted lines, output) is shared; a lesson field can differ per
+language where the languages genuinely differ (`src/lessons/index.js`, `pick()`).
+
+**Why.** JavaScript runs in the browser natively, and seeing one idea in two languages shows it
+is not tied to either. Offered alternatives were Python only, or adding a plain-English version
+too. Running learner code (M3) is still Python first; this decision covers showing code.
+
+**Status.** Standing. Supersedes the "First language: Python only" bullet of
+[2026-10-03 — Project shape](#2026-10-03--project-shape-what-for-whom-built-with-what) for
+lesson code shown on screen.
+
 ## 2026-10-03 — Reading fonts: Atkinson Hyperlegible and OpenDyslexic
 
 **Context.** Issue #6 asks for a dyslexia-friendly font choice. Every bundled font adds to the

@@ -11,7 +11,7 @@
 <section>
   <header>
     <h1>Settings</h1>
-    <button type="button" class="secondary" onclick={onback}>Back to lesson</button>
+    <button type="button" class="secondary" onclick={onback}>Back</button>
   </header>
 
   <fieldset>

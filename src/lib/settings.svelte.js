@@ -15,9 +15,10 @@ export const LINE = [
   { label: 'Relaxed', value: 1.8 },
   { label: 'Loose', value: 2.1 },
 ];
+export const LANGUAGES = { python: 'Python', javascript: 'JavaScript' };
 
 // calm: null means "user has not chosen", so the OS reduced-motion preference decides.
-const DEFAULTS = { calm: null, font: 'default', size: 100, letter: 0, line: 0, voice: '', rate: 1 };
+const DEFAULTS = { calm: null, font: 'default', size: 100, letter: 0, line: 0, voice: '', rate: 1, language: 'python' };
 
 function prefersReducedMotion() {
   return typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -34,6 +35,7 @@ function validate(raw) {
   if (Number.isInteger(raw.line) && raw.line >= 0 && raw.line < LINE.length) s.line = raw.line;
   if (typeof raw.voice === 'string') s.voice = raw.voice;
   if (typeof raw.rate === 'number' && raw.rate >= 0.75 && raw.rate <= 1.5) s.rate = raw.rate;
+  if (typeof raw.language === 'string' && Object.hasOwn(LANGUAGES, raw.language)) s.language = raw.language;
   return s;
 }
 
