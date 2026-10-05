@@ -1,0 +1,43 @@
+--- Code samples, run for real ---
+PASS  variables screen 2 (python): final output ["6"]
+PASS  variables screen 2 (javascript): final output ["6"]
+PASS  variables screen 3 (python): answer "3" vs output ["3"]
+PASS  variables screen 3 (javascript): answer "3" vs output ["3"]
+PASS  if-else screen 2 (python) at 0: ["Bring a jumper"]
+PASS  if-else screen 2 (python) at 25: ["Bring a jumper"]
+PASS  if-else screen 2 (python) at 26: ["Wear shorts"]
+PASS  if-else screen 2 (python) at 40: ["Wear shorts"]
+PASS  if-else screen 2 (javascript) at 0: ["Bring a jumper"]
+PASS  if-else screen 2 (javascript) at 25: ["Bring a jumper"]
+PASS  if-else screen 2 (javascript) at 26: ["Wear shorts"]
+PASS  if-else screen 2 (javascript) at 40: ["Wear shorts"]
+PASS  loops screen 2 (python): final output ["Lap 1","Lap 2","Lap 3","Done"]
+PASS  loops screen 2 (javascript): final output ["Lap 1","Lap 2","Lap 3","Done"]
+PASS  loops screen 3 (python): answer "5" vs output ["Lap 1","Lap 2","Lap 3","Lap 4","Lap 5"]
+PASS  loops screen 3 (javascript): answer "5" vs output ["Lap 1","Lap 2","Lap 3","Lap 4","Lap 5"]
+PASS  if-else question at 25 (python): ["Bring a jumper"]
+PASS  if-else question at 25 (javascript): ["Bring a jumper"]
+--- Click through in Chromium, 390px wide ---
+PASS  picker lists 4 lessons
+PASS  steps (Python): reached the end after 2 presses (expected 2)
+PASS  variables choice (Python) gives feedback
+PASS  variables (Python): reached the end after 6 presses (expected 6)
+PASS  if-else slider (Python): 30 -> "Wear shorts", 25 -> "Bring a jumper"
+PASS  if-else choice (Python) gives feedback
+PASS  if-else (Python): reached the end after 3 presses (expected 3)
+PASS  loops choice (Python) gives feedback
+PASS  loops (Python): reached the end after 10 presses (expected 10)
+PASS  no page errors (Python)
+PASS  picker lists 4 lessons
+PASS  steps (JavaScript): reached the end after 2 presses (expected 2)
+PASS  variables choice (JavaScript) gives feedback
+PASS  variables (JavaScript): reached the end after 6 presses (expected 6)
+PASS  if-else slider (JavaScript): 30 -> "Wear shorts", 25 -> "Bring a jumper"
+PASS  if-else choice (JavaScript) gives feedback
+PASS  if-else (JavaScript): reached the end after 3 presses (expected 3)
+PASS  loops choice (JavaScript) gives feedback
+PASS  loops (JavaScript): reached the end after 10 presses (expected 10)
+PASS  no page errors (JavaScript)
+PASS  saved language shows JavaScript after reload: "let score = 5;"
+
+All checks passed
